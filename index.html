@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Arithmetic Questionare</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="script.js"></script> <!--<script async></s>-->
+</head>
+<body style="background-color:#d6cdb8;">
+  <section class="sec_main">
+  <script type="text/javascript" defer>
+    setTimeout(resetQuestion,2000);
+  </script>
+  <h1 class="heading_row title">Standard math questions:</h1>
+  <hr id="x" /><br>
+    <section class="sec_calc">
+      <div class="input_area"> 
+        <label id="question">loading...</label>
+        <input type="text" id="inputBox1" value="">
+        <button class="btn" id="btnSubmit" onclick="javascript:clickHandler()">Check math!</button>
+      </div>
+   </section><button class="btn_next" id="btnNext" onclick="javascript:void(0);">Next</button><button class="btn_skip" onclick="javascript:void(0);">Skip</button>
+   <section>
+     <div class="result_area">
+       <h1 class="result_style"></h1>
+       <script type="text/javascript" defer>                //omit 'on' prefix and parenthesis
+         document.querySelectorAll('#btnNext')[0].addEventListener('click',clearBtn,false);
+         document.querySelectorAll('.btn_skip')[0].addEventListener('click',clearBtn,false);
+       </script>
+     </div>
+   </section>
+
+  </section>
+</body>
+</html>

@@ -1,0 +1,41 @@
+#x {
+  width:339px;
+  float:left;
+}
+.sec_main {
+  border:1px solid rgba(0, 0, 0, 0.20);
+  border-width:1px;
+  padding:10px 10px 10px 20px;
+  display:inline-block;
+  margin:20px 50px auto 40px;
+}
+.sec_calc {  
+  border:solid #000;
+  border-width:2px;
+  padding:5px;
+  background-color:#9bc6c7;
+  display:inline-block;
+}
+.heading_row, .title {
+  background:##0000FF;
+  padding:1px;
+  margin:1px;
+}
+button, #btnSubmit { /* #btnSubmit is redundant */
+  background-color:#9bc6c7;
+  border-radius:5px;
+}
+.btn_next, #btnNext { /*#btNext id attr should not be used next time */ 
+  background-color:#e8cccc;
+  visibility:hidden;
+  margin-left:10px;
+  padding:1px 7px;
+  font-weight:550;
+} 
+.btn_skip {
+  background-color:#e8cccc;
+  padding:1px 7px;
+  font-weight:550;
+  margin:auto auto auto -46px; 
+  visibility:hidden;
+}
