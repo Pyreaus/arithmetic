@@ -29,16 +29,16 @@ function resetQuestion() {
     generateNumbers();
   }
   if (selectedOperator == 3) {
-    document.getElementById("question").innerHTML = `${num1}&#160;${mathOperators[selectedOperator].sign}&#160;${Math.round(Math.sqrt(num2))}&#160;=`;
+    document.querySelectorAll("#question")[0].innerHTML = `${num1}&#160;${mathOperators[selectedOperator].sign}&#160;${Math.round(Math.sqrt(num2))}&#160;=`;
   } else {
-    document.getElementById("question").innerHTML = `${num1}&#160;${mathOperators[selectedOperator].sign}&#160;${num2}&#160;=`;
+    document.querySelectorAll("#question")[0].innerHTML = `${num1}&#160;${mathOperators[selectedOperator].sign}&#160;${num2}&#160;=`;
   }
 }
 function clickHandler() {
+   attempts++;
   {
-    attempts++;
-  }   
-  (attempts >= 3) ? document.querySelectorAll(".btn_skip")[0].style.visibility = "visible" : void (0);
+    (attempts >= 3) ? document.querySelectorAll(".btn_skip")[0].style.visibility = "visible" : void (0);
+  }
   let [value,right_or_wrong] = [document.querySelector("#inputBox1").value, void (0)];
   try {
     if (!(value == result) || value == null) {
