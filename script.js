@@ -35,8 +35,8 @@ function resetQuestion() {
   }
 }
 function clickHandler() {
-   attempts++;
   {
+    attempts++;
     (attempts >= 3) ? document.querySelectorAll(".btn_skip")[0].style.visibility = "visible" : void (0);
   }
   let [value,right_or_wrong] = [document.querySelector("#inputBox1").value, void (0)];
