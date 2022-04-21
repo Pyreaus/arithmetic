@@ -13,6 +13,17 @@ function generateNumbers() {
     result = mathOperators[selectedOperator].method(num1,num2);
   }
 }
+function checkMath(callback=0,num1,num2,...numx) {
+  let opResult = num1 + num2 + numx.reduce((x,y)=>{return x+y});
+  (callback==undefined||callback==0) ? void(0) : callback(opResult);
+}
+function displaySomething(param=0) {
+      var newElement = document.createElement("h1");
+      newElement.appendChild(document.createTextNode(param)); 
+      document.body.appendChild(newElement);
+}// (function(...n){
+ //   console.log(n);
+ // })(0,0,0);
 function resetQuestion() {
   {
     generateNumbers();
